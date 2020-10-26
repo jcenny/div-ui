@@ -1,11 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { NavContainer, CircleDiv } from './styles/ContainerStyles.js';
+import { NavContainer, CircleDiv, Text, TextContainer } from './styles/ContainerStyles.js';
 
-const Container = ({ opacity, divCount, allDivStatus, handleCircleClick }) => {
+const Container = ({ opacity, divCount, allDivStatus, handleHover, handleCircleClick }) => {
   const divs = new Array(divCount).fill();
-
   return (
     <NavContainer opacity={opacity}>
       {divs.map((div, index) => (
@@ -14,7 +12,11 @@ const Container = ({ opacity, divCount, allDivStatus, handleCircleClick }) => {
         id={index + 1}
         color={allDivStatus[index] ? 'blue' : 'black'}
         onClick={handleCircleClick}
-        />
+        onMouseOver={handleHover}
+        onMouseOut={handleHover}
+        > 
+          {/* <TextContainer><Text color={allDivStatus[index] ? 'white' : 'black'}>{index + 1}</Text></TextContainer> */}
+        </CircleDiv>
       ))}
     </NavContainer>
   )

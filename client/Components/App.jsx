@@ -14,7 +14,7 @@ function App() {
   const [opacity, setOpactity] = useState(1);
 
   const createCircleDivs = (divCount) => {
-    const status = new Array(divCount).fill(false);
+    const status = new Array(Number(divCount)).fill(false);
     setAllDivStatus(status);
     setDivCount(Number(divCount));
   }
@@ -26,16 +26,23 @@ function App() {
     let newStatus = allDivStatus;
     if (color === 'black') {
       newStatus[num - 1] = true;
-      setAllDivStatus(newStatus);
       setCurrentText(`TURNING ON ${num}`)
     } else {
       newStatus[num - 1] = false;
-      setAllDivStatus(newStatus);
       setCurrentText(`TURNING OFF ${num}`);
     }
+    setAllDivStatus(newStatus);
     // turn on text and style transition
     setOpactity(0.3)
     setShowText(true);
+  }
+
+  const handleHover = (e) => {
+    // const num = e.target.id;
+    // let newStatus = allDivStatus;
+    // const current = newStatus[num - 1][1];
+    // newStatus[num - 1][1] = !current;
+    // setAllDivStatus(newStatus);
   }
 
   return (
@@ -52,7 +59,13 @@ function App() {
         <NotificationText>{currentText}</NotificationText>
       </CSSTransition>
 
-      <Container opacity={opacity} divCount={divCount} allDivStatus={allDivStatus} handleCircleClick={handleCircleClick} />
+      <Container 
+        opacity={opacity} 
+        divCount={divCount} 
+        allDivStatus={allDivStatus} 
+        handleHover={handleHover}
+        handleCircleClick={handleCircleClick} 
+      />
     </div>
   )
 }

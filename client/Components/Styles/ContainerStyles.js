@@ -10,7 +10,6 @@ const NavContainer = styled.div`
   left: 0;
   opacity: ${({ opacity }) => opacity};
 ` 
-
 const CircleDiv = styled.div`
   width: 100px;
   height: 100px;
@@ -19,8 +18,25 @@ const CircleDiv = styled.div`
   margin-left: 5px;
   background-color: ${({ color }) => color};
 `
+const Text = styled.div`
+  font-size: 16px;
+  letter-spacing: 3px;
+  color: ${({ color }) => color};
+  margin: 0;
+  position: absolute;
+`
+const TextContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  position: relative;
+  top: 50%
+`;
 
 export {
   NavContainer,
   CircleDiv,
+  Text,
+  TextContainer,
 }
