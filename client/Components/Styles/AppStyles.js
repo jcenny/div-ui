@@ -6,14 +6,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const CircleDiv = styled.div`
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
-  display: inline-block;
-  margin-left: 5px;
-`
-
 const NotificationText = styled.h2`
   text-align: center;
   vertical-align: middle;
@@ -24,6 +16,5 @@ const NotificationText = styled.h2`
 
 export {
   GlobalStyle, 
-  CircleDiv,
   NotificationText,
 }

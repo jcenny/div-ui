@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import { NavForm, Button } from './Styles/FormStyles.js';
 
 const Form = ({ createCircleDivs }) => {
