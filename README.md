@@ -8,9 +8,17 @@
 2. [Development](#development)
 
 ## Demo
-![Alt text](./div-ui-demo1.gif "Create requested amount of child divs")
-![Alt text](./div-ui-demo2.gif "Horizontally aligns child divs with responsive design")
-![Alt text](./div-ui-demo3.gif "Div changes according to click")
+Create requested amount of child divs:
+
+![Alt text](./div-ui-demo1.gif)
+
+Horizontally aligns child divs with responsive design:
+
+![Alt text](./div-ui-demo2.gif)
+
+Div changes according to click:
+
+![Alt text](./div-ui-demo3.gif)
 
 ## Development
 
