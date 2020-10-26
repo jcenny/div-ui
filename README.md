@@ -4,7 +4,11 @@
 
 ## Table of Contents
 
-1. [Development](#development)
+1. [Demo](#demo)
+2. [Development](#development)
+
+## Demo
+![Alt text](./div-ui-demo.gif)
 
 ## Development
 
